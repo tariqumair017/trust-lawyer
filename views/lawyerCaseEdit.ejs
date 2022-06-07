@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Update Case</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body  class="form-v9">
+
+    <div class="page-content">
+		<div class="form-v9-content" style="background:rgb(82, 78, 78) ">
+			<form class="form-detail" action="/dashboard/<%=casef._id%>?_method=PUT" method="POST">
+				<h2 style="color: white;">Update Case Status</h2>
+				<div class="form-row-total">
+					<div class="form-row">
+                        <h4>Client Name</h4>
+						<h3 style="color: rgb(231, 231, 231);" id="full-name" class="input-text" readonly required><%=casef.name%></h3>
+					</div>
+				</div>
+                <div class="form-row-total">
+                    <div class="form-row">
+                        <h4>Status</h4>
+						<select class="input-text" name="data[status]"> 
+                            <option selected><%=casef.status%></option>
+                            <option>Accepted</option>
+                            <option>Win</option>
+                            <option>Lost</option>
+                            <option>Waiting</option>
+                            <option>Declined</option>
+                        </select>
+					</div>
+                </div>
+				<div class="form-row-total">
+					<div class="form-row">
+                        <h4>Total Hearing</h4>
+						<input style="width: 200px;" type="number" min="0" step="1" value="<%=casef.hearing%>" name="data[hearing]" class="input-text" required>
+					</div>
+					<div class="form-row">
+						<h4>Next Hearing</h4>
+					    <input class="input-text" name="data[nextDate]" id="today" type="date" value="<%=casef.nextDate%>" required>
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+						<h4>Message For Client</h4>
+					    <textarea  name="data[message]"  class="input-text" cols="45" rows="5" required>Nothing</textarea>
+                    </div>
+				</div>           
+                <br><br>        
+				<div class="form-row-last">
+					<div class="form-row">
+					    <input style="background-color:rgb(74, 178, 74) ;margin-left: -100px;" type="submit" id="go" name="register" class="register" value="Update">
+				    </div>
+				</div>
+				<div class="form-row-last">
+					<div class="form-row">
+				        <a style="text-decoration: none; margin-left: -130px;" href="/dashboard"> <input type="button" id="go" name="login" class="register" value="Back">  </a>
+			       </div>
+			    </div>              
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

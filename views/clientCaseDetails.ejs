@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Medcity - Medical Healthcare HTML5 Template">
+  <title>Case Details</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <link rel="stylesheet" href="/css/libraries.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="pt-120 pb-80">
+      <div class="container">
+        <div class="justify-content-center row">
+          <div class="col-sm-12 col-md-12 col-lg-7">
+            <h2>Details of Case</h2>
+            <ul class="details-list list-unstyled mb-60">
+              <li>
+                <h5 class="details__title">Case ID</h5>
+                <div class="details__content">
+                  <p class="mb-0">#<%=casef._id%></p>
+                </div>
+              </li>
+              <li>
+                <h5 class="details__title">Your Name</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=casef.name%></p>
+                </div>                
+              </li> 
+              <li>               
+                <h5 class="details__title">Lawyer Name</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=casef.lawyerName%></p>
+                </div>              
+              </li>       
+              <li>              
+                <h5 class="details__title">Your City</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=casef.city%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">Your Email</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=casef.mail%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">Your CNIC</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=casef.cnic%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">Your Phone</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=casef.phone%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">Case Putting Date/Time</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=casef.date%>/<%=casef.time%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">Status</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=casef.status%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">Case Type</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=casef.caseType%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">Description</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=casef.description%></p>
+                </div>               
+              </li>
+            </ul>
+          <div class="col-sm-12 col-md-12 col-lg-5">
+            <div class="widget widget-reports">
+              <a href="/client-dashboard" class="btn btn__primary btn__block">
+                <span>Back</span>
+              </a>
+            </div> 
+          </div>          
+          </div><!-- /.col-lg-8 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+  </div><!-- /.wrapper -->
+
+  <script src="/js/jquery-3.5.1.min.js"></script>
+  <script src="/js/plugins.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<style>
+ .co{
+   display: flex;
+   flex-wrap: wrap;  margin-top: 2px;
+ }
+  #btn1{
+    font-size: 25px;
+    color: white;
+    background-color: rgb(31, 147, 73);
+      border-radius: 20px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease 0s;
+      width: 300px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      
+    }
+    @media only screen and (min-width: 768px)
+  {
+   #btn1{
+     margin-left: -200px;
+   }
+}    #btn1:hover{
+
+    background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+  }
+</style>
+
+<%-  include ('./partials/header');  -%>
+
+<br><br><br><br><br>
+   <div class="cont">
+     <div class="btn">
+       <div class="btn1">
+         <button></button>
+       </div>
+     </div>
+   </div>
+
+   <div style="margin-left: 20px;" class="co">
+      <div class="but">
+       <a href="/client-login">   <button style="
+        margin-left: 300px; padding-left: 60px; padding-right: 60px;" id="btn1">As A client</button></a>
+      </div>
+      <div class="but">
+      <a href="/lawyer-login">  <button style="margin-left: 80px;" id="btn1">As A Lawyers</button>
+      </a> </div>
+
+    </div>
+    <br><br>
+    <h1 style="color: white; margin-left: 20%;">Lawyer Duties & Responsibilities</h1>
+    <p style="width: 80%;margin-left: 10%; text-align: center;">
+      Lawyers represent either the plaintiff—the party that's filing or initiating a legal action—or the defendant, the party that's being sued or charged. They advance their clients' case through oral argument and written documents, and they counsel clients on how the facts of their particular case apply to the law.
+      
+      Lawyers’ roles and daily responsibilities can vary considerably, depending upon their practice environment and field of specialization.
+      
+      Interview new clients and meet with existing clients to render legal advice.
+      Perform legal research to determine how the facts of a case interact with current law.
+      Perform case research by taking depositions, attending site inspections, and engaging in discovery, the exchange of information pertinent to a case from both parties to the action.
+      Argue motions and attend other pretrial court appearances before a judge.
+      Draft legal documents including pleadings, discovery, motions, briefs, contracts, and wills.
+      Follow up after a court decision has been handed down or a settlement has been reached, ensuring that all parties to an action do what they've been committed or ordered to do.</p>
+<%-  include ('./partials/footer');  -%>

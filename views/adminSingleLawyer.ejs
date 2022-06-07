@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Lawyer Details</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <script src="https://kit.fontawesome.com/5e1784d9c5.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/libraries.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/update.css">
+
+</head>
+
+<body>
+
+
+  <div class="wrapper">
+    <div class="profile">
+      <div class="content">
+        <h2>
+          <%=lawyer.name%>
+        </h2>
+        <form action="">
+          <fieldset>
+            <div class="grid-65 gallery-img">
+              <img src="/images/uploads/<%=lawyer.file1%>" width="700" height="260" alt="Dcoument">
+              <a class="popup-gallery-item" href="/images/uploads/<%=lawyer.file1%>"><i style="font-size: 22px;"
+                  class="fas fa-eye">Zoom</i></a>
+
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid-35">
+              <label for="lname">License No</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="lname" value="<%=lawyer.license%>" readonly tabindex="2" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid-35">
+              <label for="lname">City</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="lname" value="<%=lawyer.city%>" readonly tabindex="2" />
+            </div>
+          </fieldset>
+          <!-- Description about User -->
+
+          <!-- Location -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="location">Address</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="location" value="<%=lawyer.address%>" readonly tabindex="4" />
+            </div>
+          </fieldset>
+          <!-- Country -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="country">Email</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="country" value="<%=lawyer.username%>" readonly tabindex="5" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid-35">
+              <label for="country">CNIC</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="country" value="<%=lawyer.cnic%>" readonly tabindex="5" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid-35">
+              <label for="country">Phone No</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="country" value="<%=lawyer.phone%>" readonly tabindex="5" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid-35">
+              <label for="country">Date/Time</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="country" value="<%=lawyer.date%>" readonly tabindex="5" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid-35">
+              <label for="description">Experience In (Case Types)</label>
+            </div>
+            <div class="grid-65">
+              <textarea name="" id="" cols="30" rows="auto" tabindex="3" readonly><%=lawyer.experience%></textarea>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid-35">
+              <label for="description">Qualification & Experience</label>
+            </div>
+            <div class="grid-65">
+              <textarea name="" id="" cols="30" rows="auto" tabindex="3" readonly><%=lawyer.experience%></textarea>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid-35">
+              <a href="/adminDashboardLawyer"><span style=" border: 1px solid black; padding: 10px 30px;background-color: rgb(196, 95, 95);color: white;font-weight: bold;border-radius: 20px;">back</span></a>
+             </div>
+          </fieldset>
+          <fieldset></fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $("#tabs").tabs({
+      activate: function (event, ui) {
+        var active = $('#tabs').tabs('option', 'active');
+        $("#tabid").html('the tab id is ' + $("#tabs ul>li a").eq(active).attr("href"));
+      }
+    });
+  </script>
+  <script src="/js/jquery-3.5.1.min.js"></script>
+  <script src="/js/plugins.js"></script>
+  <script src="/js/main.js"></script>
+
+</body>
+
+</html>

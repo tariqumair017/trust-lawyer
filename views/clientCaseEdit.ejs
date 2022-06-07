@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Edit</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body  class="form-v9">
+
+    <div class="page-content">
+		<div class="form-v9-content" style="background:rgb(82, 78, 78) ">
+			<form class="form-detail" action="/client-dashboard/<%=casef._id%>?_method=PUT" method="POST">
+				<h2 style="color: white;">Edit Your Case</h2>
+				<div class="form-row-total">
+					<div class="form-row">
+                        <label for="">Case Type</label><br><br>
+						<input type="Text" name="data[caseType]" class="input-text" value="<%=casef.caseType%>" required>
+					</div>
+                    <div class="form-row">
+                        <label for="">Your Phone</label><br><br>
+						<input type="text" name="data[phone]" minlength="10" maxlength="10" class="input-text" value="<%=casef.phone%>" required>
+					</div> 
+				</div>
+				<div class="form-row-total">			
+                    <div class="form-row">
+                        <label for="">Description</label><br><br>
+                        <textarea name="data[description]" class="input-text" id="" cols="46" rows="5" required><%=casef.description%></textarea>
+                    </div>
+				</div>             
+                <br>             
+				<div class="form-row-last">
+					<input style="margin-left: -540px; background-color:rgb(74, 178, 74)" type="submit" id="go" name="register" class="register" value="Update">
+				</div>
+				<div class="form-row-last">
+				<a style="text-decoration: none; margin-left: -575px;" href="/client-dashboard"> <input type="button" id="go" name="login" class="register" value="Back">  </a>
+				</div>
+                
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

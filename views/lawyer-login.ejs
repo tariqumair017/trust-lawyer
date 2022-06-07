@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <!-- ===== Iconscout CSS ===== -->
+  <link rel="stylesheet" href="css/login.css">
+
+    <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="css/style.css">
+         
+    <title>TrustLawyer | Lawyer Login</title>
+</head>
+<body>
+    
+    <div class="container" style="max-width: 516px;">
+        <% if(success && success.length > 0) { %>
+            <div class="alert alert-success" role="alert">
+                <%=success%>
+            </div>
+        <% } %>
+        <% if(error && error.length > 0) { %>
+            <div class="alert alert-danger" role="alert">
+                <%=error%>
+            </div>
+        <% } %>
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Lawyer Login</span>
+
+                <form action="/lawyer-login" method="POST">
+                    <div class="input-field">
+                        <input type="email" name="username" placeholder="Email your email"  required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">       
+                        <a href="/lawyerForgot" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Login Now">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a style="text-decoration: none;" href="/lawyer-signup" class="text signup-link">Signup now</a>
+                    </span>
+              
+                </div>
+                <div class="login-signup">
+                        <a style="text-decoration: none; color: red;" href="/" >Back To Main page</a>          
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

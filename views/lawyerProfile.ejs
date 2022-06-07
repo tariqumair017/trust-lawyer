@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Medcity - Medical Healthcare HTML5 Template">
+  <title>Lawyer Profile</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <link rel="stylesheet" href="/css/libraries.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="pt-120 pb-80">
+      <div class="container">
+        <% if(success && success.length > 0) { %>
+          <div class="alert alert-success" role="alert">
+              <%=success%>
+          </div>
+      <% } %>
+      <% if(error && error.length > 0) { %>
+          <div class="alert alert-danger" role="alert">
+              <%=error%>
+          </div>
+      <% } %>
+        <h1 style="
+        text-decoration: underline;">Profile..</h1>
+        <div class="row">
+         
+          <div class="col-sm-12 col-md-12 col-lg-9">
+            <div class="col-sm-12 col-md-12 col-lg-3">
+              <aside class="sidebar has-marign-right">
+                <div class="widget widget-member">
+                  <div class="member mb-0">
+                    <div class="member__img">
+                      <img style="border-radius: 50%;" src="/images/uploads/<%=getLawyer.file2%>" alt="Lawyer img">
+                    </div><!-- /.member-img -->
+                    <br>
+                  </div><!-- /.member -->
+                </div><!-- /.widget-member -->
+              </aside><!-- /.sidebar -->
+            </div><!-- /.col-lg-4 -->
+           
+            <ul  style="margin-top: 20px;" class="details-list list-unstyled mb-60">
+              <li>
+                <h5 class="details__title">Name</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=getLawyer.name%></p>
+                </div>
+              </li>
+              <li>
+                <h5 class="details__title">Email</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=getLawyer.username%></p>
+                </div>                
+              </li> 
+              <li>               
+                <h5 class="details__title">City</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=getLawyer.city%></p>
+                </div>              
+              </li>       
+              <li>              
+                <h5 class="details__title">Address</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=getLawyer.address%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">Phone</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=getLawyer.phone%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">CNIC</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=getLawyer.cnic%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">Preference Case Types</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=getLawyer.special%></p>
+                </div>               
+              </li>
+              <li>               
+                <h5 class="details__title">Qualification & Experience</h5>
+                <div class="details__content">
+                  <p class="mb-0"><%=getLawyer.experience%></p>
+                </div>               
+              </li>
+            </ul>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="widget widget-reports">
+              <a href="/dashboard/lawyerProfile/edit" class="btn btn__primary btn__block">
+                <span>Edit Profile</span>
+              </a>
+            </div> 
+          </div>
+          <br>
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="widget widget-reports">
+              <a href="/dashboard/lawyerProfile/change" class="btn btn__primary btn__block">
+                <span>Change Password</span>
+              </a>
+            </div> 
+          </div>
+          <br>
+          <div class="col-sm-12 col-md-12 col-lg-4">
+         
+            <div class="widget widget-reports">
+              <a href="/dashboard" class="btn btn__primary btn__block">
+                <span>Back</span>
+             </a>
+              </a>
+            </div> 
+          </div>          
+          </div><!-- /.col-lg-8 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+  </div><!-- /.wrapper -->
+
+  <script src="/js/jquery-3.5.1.min.js"></script>
+  <script src="/js/plugins.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

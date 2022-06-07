@@ -1,0 +1,182 @@
+<%-  include ('./partials/header');  -%>
+
+
+    <section class="pt-120 pb-80">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <aside class="sidebar has-marign-right">
+              <div class="widget widget-member">
+                <div class="member mb-0">
+                  <div class="member__img">
+                    <img src="/images/uploads/<%=found.file2%>" width="230" height="330" alt="lawyer img">
+                  </div><!-- /.member-img -->
+                  <div class="member__info">
+                    <h5 class="member__name"> <%= found.name %> </h5>
+                    <p class="member__job"><%= found.city %></p>
+                    <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+                      <ul class="social-icons list-unstyled mb-0">
+                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+                      </ul><!-- /.social-icons -->
+                    </div>
+                  </div><!-- /.member-info -->
+                </div><!-- /.member -->
+              </div><!-- /.widget-member -->
+              <div class="widget widget-help bg-overlay bg-overlay-primary-gradient">
+                <div class="bg-img"><img src="/images/backgrounds/8.jpg" alt="background"></div>
+                <div class="widget-content">
+                  <div class="widget__icon">
+                    <i class="icon-call3"></i>
+                  </div>
+                  <h4 class="widget__title">Discuss Case</h4>
+                  <p class="widget__desc">You can discuss your case to our Lawyer before hier him. It will be helpful to both of you.</p>
+                                
+                 
+                </div><!-- /.widget-content -->
+              </div><!-- /.widget-help -->
+            </aside><!-- /.sidebar -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-sm-12 col-md-12 col-lg-8">
+            <div style="width: 800px; height: 450px; border: 1px soldi white; background-color: white;
+            border-radius: 20px;" class="back">
+            <div  class="text-block mb-50">
+              <h1 style="color: black; padding: 0PX 20PX; padding-top: 20px; font-size: 17px;" class="text-block__title">Qualification & Experience:</h1>
+              <h5 style="color: black;  padding: 20PX; font-size: 15px;" class="text-block__desc mb-20 font-weight-bold color-secondary"> <%= found.experience %> </h5>
+            </div><!-- /.text-block -->
+            <ul class="details-list list-unstyled mb-60">
+              <li>
+                <h5 class="details__title">Preference Case Types:</h5>
+                <div class="details__content">
+                  <p style="color: black ;" class="mb-0"><%= found.special %></p>
+                </div>
+              </li>     
+              <li>
+                <h5 style="color:  rgb(0, 0, 0);" class="details__title">Address:</h5>
+                <div class="details__content">
+                  <p style="color:  rgb(0, 0, 0);"  class="mb-0"> <%= found.address %> </p>
+                </div>
+              </li>
+              <li>
+                <h5 style="color:  rgb(0, 0, 0);" class="details__title">Phone #:</h5>
+                <div class="details__content">
+                  <p style="color:  rgb(0, 0, 0);"  class="mb-0"> <%= found.phone %> </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+            <div class="text-block mb-50">
+             
+              <h5 style="color:  white;  margin-top: 30px;"  class="text-block__title">Lawyer’s Services</h5>
+              <p style="color:  white;" class="text-block__desc mb-20">Attorneys perform different functions which vary in cost and the level of control clients have over their affairs, including:
+
+                1)Consultation for legal information and advice
+                2)Consultation to review documents such as agreements, leases, wills, corporation documents, do-it-yourself court forms
+                3)Mediation, arbitration, or other third party services
+                4)Preparation of documents
+                5)Representing clients in negotiations possibly under “collaborative lawyering” agreement where both attorneys withdraw if either side chooses to litigate
+                6)Representing clients in court, arbitration, administrative and legislative hearings
+              </p>
+            </div><!-- /.text-block -->   
+            <section class="contact-layout4 bg-overlay bg-overlay-secondary-gradient pb-50 pb-50">
+              <div class="bg-img"><img src="/images/banners/3.jpg" alt="banner"></div>
+              <div class="contact-panel mb-0">
+                <form class="contact-panel__form" action="/lawyers/<%=found._id%>" method="POST">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h4 class="contact-panel__title">Put Your Case</h4>
+                      <p style="color:black ;" class="contact-panel__desc mb-30">Please feel welcome to contact our friendly reception staff
+                        with any general case enquiry. Our Lawyers will also receive or return any urgent calls.
+                      </p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <i class="icon-widget form-group-icon"></i>
+                        <input type="text" class="form-control" placeholder="Case Type (property, murder.." id="contact-name" name="caseType"
+                          required>
+                      </div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <i class="icon-widget form-group-icon"></i>
+                        <input type="text" class="form-control" placeholder="Add City" id="contact-name" name="city"
+                          required>
+                      </div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-sm-6 col-md-6 col-lg-12">
+                      <div class="form-group">
+                      <textarea class="form-control" id="contact-name" cols="40" rows="5" placeholder="Describe your case" name="description" required></textarea>
+                      </div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <p style="color:black ;">Your Name</p>
+                      <div class="form-group">
+                        <i class="icon-user form-group-icon"></i>
+                        <input type="text" class="form-control" value="<%=currentUser.cname%>" id="contact-name" readonly name="name"
+                          required>
+                      </div>
+                    </div><!-- /.col-lg-6 --> 
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <p style="color:black ;">Lawyer Name</p>
+                      <div class="form-group">
+                        <i class="icon-user form-group-icon"></i>
+                        <input type="text" class="form-control" value="<%= found.name %>" id="contact-name" readonly name="lawyerName"
+                          required>
+                      </div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <p style="color:black ;">Your CNIC</p>
+                      <div class="form-group">
+                        <i class="icon-user form-group-icon"></i>
+                        <input type="text" class="form-control" minlength="13" maxlength="13" value="<%=currentUser.ccnic%>" id="contact-name" readonly name="cnic"
+                          required>
+                      </div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <p style="color:black ;">Your Email</p>
+                      <div class="form-group">
+                        <i class="icon-email form-group-icon"></i>
+                        <input type="email" class="form-control" value="<%=currentUser.username%>" readonly id="contact-email"
+                          name="mail" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
+                      </div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <p style="color:black ;">Your Phone</p>
+                      <div class="form-group">      
+                        <i class="icon-phone form-group-icon"></i>
+                        <input type="text" class="form-control" minlength="10" maxlength="10" value="<%=currentUser.cphone%>" id="contact-Phone" 
+                        name="phone" required>
+                      </div>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <p style="color:black ;">Case Date</p>
+                      <div class="form-group form-group-date">
+                        <i class="icon-calendar form-group-icon"></i>
+                        <input type="date" class="form-control" id="contact-date" name="date" required>
+                      </div>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <p style="color:black ;">Case Time</p>
+                      <div class="form-group form-group-date">
+                        <i class="icon-clock form-group-icon"></i>
+                        <input type="time" class="form-control" id="contact-time" name="time" required>
+                      </div>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-12">
+                      <button class="btn btn__primary btn__rounded btn__block btn__xhight mt-10">
+                        <span>Hier Now</span> <i class="icon-arrow-right"></i>
+                      </button>
+                      <div class="contact-result"></div>
+                    </div><!-- /.col-lg-12 -->
+                  </div><!-- /.row -->
+                </form>
+              </div>
+            </section><!-- /.contact layout 2 -->
+          </div><!-- /.col-lg-8 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+
+   
+<%-  include ('./partials/footer');  -%>

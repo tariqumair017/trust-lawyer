@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Profile</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body  class="form-v9">
+
+    <div class="page-content">
+		<div class="form-v9-content" style="background:rgb(82, 78, 78) ">
+			<form class="form-detail" action="/dashboard/lawyerimage?_method=PUT" method="POST" enctype="multipart/form-data">
+				<h2 style="color: white;"> Update Profile</h2>
+				<div class="form-row-total">
+					<div class="form-row">
+						<label for="img">Change Image</label>
+                        <input  type="file" name="file2" accept="image/*" value="Change Image" required>                 	
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row-last">
+						<input style="background-color: rgb(51, 159, 63);" type="submit" name="update" class="register" value="Update Img">
+					</div>
+			    </div>
+			</form>
+			<form class="form-detail" action="/dashboard/lawyerProfile?_method=PUT" method="POST">
+				<div class="form-row-total">
+					<div class="form-row">	
+                        <label for="img">Name</label>
+						<input style="color: rgb(231, 231, 231);" type="text" name="name" id="full-name" class="input-text" value="<%=getLawyer.name%>" required>
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+						<label for="img">City</label>
+						<input type="text" name="city" class="input-text" value="<%=getLawyer.city%>" required>
+					</div>
+					<div class="form-row">
+						<label for="img">Address</label>
+						<input type="text" name="address" class="input-text" value="<%=getLawyer.address%>" required>
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+						<label for="img">Phone</label>
+						<input type="text" name="phone" minlength="11" maxlength="11" class="input-text" value="<%=getLawyer.phone%>" required>
+					</div>
+					<div class="form-row">
+						<label for="img">CNIC</label>
+						<input type="text" name="cnic" minlength="13" maxlength="13" class="input-text" value="<%=getLawyer.cnic%>" required>
+					</div>
+				</div>
+                <div class="form-row-total">
+					<div class="form-row">
+						<label for="img">Preference Case Types</label>
+						<textarea name="special" class="input-text" cols="45" rows="5" required><%=getLawyer.special%></textarea>
+					</div>
+                    <div class="form-row">
+						<label for="img">Qualification & Experience</label>
+						<textarea name="experience" class="input-text" cols="45" rows="5" required><%=getLawyer.experience%></textarea>
+					</div>					
+		        </div>
+              
+				<div class="form-row-last">
+					<input   style=" margin-left: -475px; background-color: rgb(51, 159, 63);" type="submit" name="update" class="register" value="Update">
+				</div>
+                <div class="form-row-last">
+					<a style="text-decoration: none;margin-left: -515px; " href="/dashboard/lawyerProfile"> <input type="button" id="go" name="login" class="register" value="Back">  </a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
