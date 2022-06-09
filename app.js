@@ -25,7 +25,7 @@ const client = require("./models/client");
 
 
 //mongoose.connect("mongodb://localhost:27017/fyp_v1" , { useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.connect("mongodb+srv://umair:Imv5f9AZN4i023FO@cluster0.rqbog.mongodb.net/tlawyers?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://umair:Imv5f9AZN4i023FO@cluster0.rqbog.mongodb.net/tlawyers?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public/"));
