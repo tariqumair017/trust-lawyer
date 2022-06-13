@@ -34,7 +34,6 @@ router.post("/help", (req, res) => {
         email: req.body.email,
         phone: req.body.phone,
         date: req.body.date,
-        time: req.body.time,
         message: req.body.message
     });
 

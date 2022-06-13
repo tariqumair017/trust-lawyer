@@ -5,7 +5,6 @@ let ComplainSchema = new mongoose.Schema({
     email: String,
     phone: Number,
     date: String,
-    time: String,
     message: String
 });
 

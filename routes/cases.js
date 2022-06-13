@@ -157,7 +157,7 @@ router.get("/dashboard/:caseid/edit", middleware.isLawyerLoggedin, (req, res) =>
 
 //Update Case - Update Case Status by Lawyer
 router.put("/dashboard/:caseid", middleware.isLawyerLoggedin, (req, res) => {
-    Case.findByIdAndUpdate(req.params.caseid, req.body.data, (err, updatedCase) => {
+    Case.findByIdAndUpdate(req.params.caseid, req.body.data, {new: true}, (err, updatedCase) => {
         if(err)
         {
             res.redirect("/dashboard");
@@ -166,16 +166,7 @@ router.put("/dashboard/:caseid", middleware.isLawyerLoggedin, (req, res) => {
         {
             req.flash("success", "Case Updated Successfully!");
             res.redirect("/dashboard");
-        }
-    });
 
-    Case.findById(req.params.caseid, (err, caseOne) => {
-        if(err)
-        {
-            console.log(err);
-        }
-        else
-        {
             //Sending Email
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
@@ -190,17 +181,17 @@ router.put("/dashboard/:caseid", middleware.isLawyerLoggedin, (req, res) => {
 
             const mailOptions = {
                 from: '"Trust Lawyer" <nodejsa@gmail.com>', // sender address
-                to: caseOne.mail, // list of receivers
+                to: updatedCase.mail, // list of receivers
                 subject: "Trust Lawyer (Updated Case Info)", // Subject line
                 html: `
-                <h3>Hi ${caseOne.name}</h3>
+                <h3>Hi ${updatedCase.name}</h3>
                 <h4>Your Case is updated by Our Lawyer</h4>
                 <p><b>Details:</b></p>
-                <p>Case Status:  ${caseOne.status}</p> 
-                <p>Lawyer Name:  ${caseOne.lawyerName}</p> 
-                <p>Total Hearing:  ${caseOne.hearing}</p>
-                <p>Next Hearing Date:  ${caseOne.nextDate}</p>
-                <p>Lawyer Message:  ${caseOne.message}</p>
+                <p>Case Status:  ${updatedCase.status}</p> 
+                <p>Lawyer Name:  ${updatedCase.lawyerName}</p> 
+                <p>Total Hearing:  ${updatedCase.hearing}</p>
+                <p>Next Hearing Date:  ${updatedCase.nextDate}</p>
+                <p>Lawyer Message:  ${updatedCase.message}</p>
                 `,
             };
 
