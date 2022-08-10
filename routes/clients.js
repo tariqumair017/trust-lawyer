@@ -21,7 +21,7 @@ router.get("/client-signup", (req, res) => {
     res.render("client-signup");
 });
 //Handel Client Sign Up Logic
-router.post("/client-signup", (req, res) => {
+router.post("/client-signup", (req, res) => {   
     //New
     const {
         cname,
